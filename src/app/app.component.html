@@ -9,17 +9,25 @@
       <h2 style="margin-left:30%">Epic Quotes</h2>
       <p style="margin-left:25%">Enter a Username to begin</p>
       <input type="text" class="form-control" [formControl]="userID" placeholder="Please enter a username" style="width:300px; margin-left:10%">
-      <div *ngIf="userID.invalid" class="alert alert-danger">Username is required</div>
+
       <br>
       <BR>
       <button class="btn btn-primary" style="position:relative;width:80px; margin-left:40%;top:30px" (click)="startProgram(true)" [disabled]="userID.invalid">Start</button>
+      <div *ngIf="userID.invalid" class="alert alert-danger" style="height:px" style="position:relative;top: 50px">Username is required</div>
     </div>
+    <BR>
+    <BR>
+    <BR>  
+  </div>
+  <li id="displayCard" *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'>
     <div class="card" id="quoteDisplayCard">
-      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteContent}}</p>
-      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteAuthor}}</p>
-      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteRating}}</p>
+     <p id="quoteContent">" {{quoteLibraryDisplay.quoteContent}} "</p>
+     <p id="quoteAuthour">{{quoteLibraryDisplay.quoteAuthor}}</p>
+     <p id="quoteRating">{{quoteLibraryDisplay.quoteRating}}</p>
+     <button class="btn btn-primary" style="position:relative;width:80px; left:40%">Like</button>
     </div>
-    
-  </div>  
+    <BR>
+      <BR>
+  </li>
 <app-quote-input [userID]='userID'*ngIf="initializeQuoteInput"></app-quote-input>
 </body>
