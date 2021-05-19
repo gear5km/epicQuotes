@@ -19,15 +19,18 @@
     <BR>
     <BR>  
   </div>
-  <li id="displayCard" *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'>
-    <div class="card" id="quoteDisplayCard">
-     <p id="quoteContent">" {{quoteLibraryDisplay.quoteContent}} "</p>
-     <p id="quoteAuthour">{{quoteLibraryDisplay.quoteAuthor}}</p>
-     <p id="quoteRating">{{quoteLibraryDisplay.quoteRating}}</p>
-     <button class="btn btn-primary" style="position:relative;width:80px; left:40%">Like</button>
-    </div>
-    <BR>
+  <div class="jumbotron" id="quoteDisplayContainer" *ngIf="userID.valid">
+    <li id="displayCard" *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'>
+      <div class="card" id="quoteDisplayCard">
+       <p id="quoteContent">" {{quoteLibraryDisplay.quoteContent}} "</p>
+       <p id="quoteAuthour">{{quoteLibraryDisplay.quoteAuthor}}</p>
+       <p id="quoteRating">{{quoteLibraryDisplay.quoteRating}}</p>
+       <button class="btn btn-primary" style="position:relative;width:80px; left:40%">Like</button>
+      </div>
       <BR>
-  </li>
+        <BR>
+    </li>
+  </div>
+
 <app-quote-input [userID]='userID'*ngIf="initializeQuoteInput"></app-quote-input>
 </body>
