@@ -8,7 +8,7 @@ import {AppComponent}from '../app.component';
   templateUrl: './quote-input.component.html',
   styleUrls: ['./quote-input.component.css']
 })
-export class QuoteInputComponent implements OnChanges {
+export class QuoteInputComponent implements OnInit {
 
   @Input() userID;
   userQuote=new FormControl('');
@@ -18,7 +18,10 @@ export class QuoteInputComponent implements OnChanges {
     
   }
 
-  ngOnChanges(): void {
+  onSubmit(){}
+
+  ngOnInit() {
+    
   }
 
 }

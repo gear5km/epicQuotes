@@ -12,8 +12,14 @@
       <div *ngIf="userID.invalid" class="alert alert-danger">Username is required</div>
       <br>
       <BR>
-      <button class="btn btn-primary" style="position:relative;width:80px; margin-left:40%;top:30px" (click)="startProgram()">Start</button>
+      <button class="btn btn-primary" style="position:relative;width:80px; margin-left:40%;top:30px" (click)="startProgram(true)" [disabled]="userID.invalid">Start</button>
     </div>
-  </div>
-<app-quote-input [userID]='userID'></app-quote-input>
+    <div class="card" id="quoteDisplayCard">
+      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteContent}}</p>
+      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteAuthor}}</p>
+      <p *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'> {{quoteLibraryDisplay.quoteRating}}</p>
+    </div>
+    
+  </div>  
+<app-quote-input [userID]='userID'*ngIf="initializeQuoteInput"></app-quote-input>
 </body>
