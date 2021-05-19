@@ -1,4 +1,6 @@
+import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component } from '@angular/core';
+import { FormsModule ,ReactiveFormsModule , FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'epicQuotes';
-}
+
+  userID = new FormControl('',Validators.required);
+
+  startProgram(){
+    
+      alert(this.userID.value);
+    }
+    
+  }
+

@@ -1,0 +1,21 @@
+@import'~bootstrap/dist/css/bootstrap.css';
+body {
+    font-family: sans-serif;
+}
+
+#loginContainer{
+    background-color:rgb(249, 249, 250);
+    width:auto;
+    height:300px;
+}
+
+#loginCard{
+    top:20px;
+    width:400px;
+    height:250px;
+    margin-left:30%;
+
+    
+    
+    
+}
