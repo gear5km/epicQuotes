@@ -19,18 +19,19 @@
     <BR>
     <BR>  
   </div>
+  <app-quote-input [userID]='userID'*ngIf="initializeQuoteInput"></app-quote-input>  
   <div class="jumbotron" id="quoteDisplayContainer" *ngIf="userID.valid">
     <li id="displayCard" *ngFor='let quoteLibraryDisplay of quoteLibraryDisplay'>
       <div class="card" id="quoteDisplayCard">
        <p id="quoteContent">" {{quoteLibraryDisplay.quoteContent}} "</p>
        <p id="quoteAuthour">{{quoteLibraryDisplay.quoteAuthor}}</p>
-       <p id="quoteRating">{{quoteLibraryDisplay.quoteRating}}</p>
-       <button class="btn btn-primary" style="position:relative;width:80px; left:40%">Like</button>
+       <p id="quoteRating">{{quoteLibraryDisplay.quoteRating}} / 10</p>
+       <button class="btn btn-primary" style="position:relative;width:80px;bottom:10%">Like</button>
       </div>
       <BR>
         <BR>
     </li>
   </div>
 
-<app-quote-input [userID]='userID'*ngIf="initializeQuoteInput"></app-quote-input>
+
 </body>

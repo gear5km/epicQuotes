@@ -20,9 +20,9 @@ export class AppComponent {
 
   startProgram(clicked:boolean){
 
-      alert(this.userID.value);
+      //alert(this.userID.value);
       this.initializeQuoteInput=true;
-      alert(quoteLibrary[0].quoteContent)
+      //alert(quoteLibrary[0].quoteContent)
     }
     
   }
