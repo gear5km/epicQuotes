@@ -9,7 +9,6 @@
       <h2 style="margin-left:30%">Epic Quotes</h2>
       <p style="margin-left:25%">Enter a Username to begin</p>
       <input type="text" class="form-control" [formControl]="userID" placeholder="Please enter a username" style="width:300px; margin-left:10%">
-
       <br>
       <BR>
       <button class="btn btn-primary" style="position:relative;width:80px; margin-left:40%;top:30px" (click)="startProgram(true)" [disabled]="userID.invalid">Start</button>
