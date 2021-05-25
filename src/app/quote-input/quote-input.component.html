@@ -1,10 +1,8 @@
 <!-----<p>quote-input works!</p>--->
-<p id="userIDTag">{{userID.value}} is logged in</p>
 <div class="card" id="quoteInputCard">
-    <h5>Quotes go here</h5>
-    <input type="text" class="form-control" [formControl]="userQuote" style="width:300px; margin-left:10%" >
-    <p>Authors Go Here</p>
-    <input type="text" class="form-control" [formControl]="userAuthour" style="width:300px; margin-left:10%" >
+    <h5 id="userIDTag">{{userID.value}} is logged in</h5>
+    <input type="text" class="form-control" [formControl]="userQuote" style="width:300px; margin:auto" placeholder="Quotes go here" >
+    <input type="text" class="form-control" [formControl]="userAuthour" style="width:300px; margin:auto" placeholder="Authors Go Here" >
     <p>Ratings Go here</p>
-    <button class="btn btn-primary" (click)="onSubmit()" style="width:200px; position:relative; left:20%">Post your Quote!</button>
+    <button class="btn btn-primary" (click)="onSubmit()" style="width:200px; position:relative; margin:auto">Post your Quote!</button>
 </div>

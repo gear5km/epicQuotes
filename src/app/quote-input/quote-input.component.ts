@@ -12,9 +12,9 @@ import {quoteLibrary} from '../quoteLibrary';
 export class QuoteInputComponent implements OnInit {
 
   @Input() userID;
-  userQuote=new FormControl('');
-  userAuthour=new FormControl('');
-  quoteLibraryInput=quoteLibrary;
+  userQuote=new FormControl('');          //Takes in a quote from the user
+  userAuthour=new FormControl('');        //Takes in an author from the user
+  quoteLibraryInput=quoteLibrary;         //Link the the existing array library of quotes
 
   constructor() {
     
@@ -27,7 +27,7 @@ export class QuoteInputComponent implements OnInit {
 
   onSubmit(){
     quoteLibrary.push(
-      {quoteContent:this.userQuote.value,quoteAuthor:this.userAuthour.value,quoteRating:5}
+      {quoteContent:this.userQuote.value,quoteAuthor:this.userAuthour.value,quoteRating:5,quotePoster:this.userID.value}
       )
   }
 

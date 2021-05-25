@@ -11,13 +11,13 @@ import {quoteLibrary} from './quoteLibrary';
 export class AppComponent {
   title = 'epicQuotes';
 
-  userID = new FormControl('',Validators.required);//For inputing a userID
-  initializeQuoteInput=false;//Hides the QuoteInput Componoent
-  quoteLibraryDisplay = quoteLibrary;//Gets existing Library array of quotes for display in the "quoteDisplayContainer" Element
+  userID = new FormControl('',Validators.required); //For inputing a userID
+  initializeQuoteInput=false;                       //Hides the QuoteInput Componoent until startProgram() is executed
+  quoteLibraryDisplay = quoteLibrary;               //Gets existing Library array of quotes for display in the "quoteDisplayContainer" Element
 
-  //Sets "initializeQuoteInput" to true, Enabling the quote input component
+  
   startProgram(clicked:boolean){
-      this.initializeQuoteInput=true;
+      this.initializeQuoteInput=true;               //Sets "initializeQuoteInput" to true, Enabling the quote input component
     }
     
   }
